@@ -4,28 +4,38 @@
 <meta charset="utf-8">
 <title>Welcome | NewsFire24</title>
 <style>
-* {
-	margin: 0;
-	padding: 0;
-    	box-sizing: border-box;
-}
-body {
-	font-size: 16px;
-	font-family: Helvetica, Arial, "sans-serif"
-}
-#bannersection {
-	width: auto;
-	background: url('img/background.jpg');
-	height: 100vh;
-	background-position: center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
+ body, html {
+                height: 100%;
+                margin:0;
+            }
+          .img { 
+                background-image: url("img/background.jpg");
+            /* center the background image vertically and horizontally*/
+                background-position: center center;
+            
+            /* removing tilings and repeatition*/
+                background-repeat: no-repeat;
+            
+            /* to scale image to fit the screen */
+                background-size: cover;
+            
+            /* fixed viewport against scroll ups and downs*/
+                background-attachment: fixed;
+            
+                height:100%;
+          }
+          
+          /* for responsiveness: changing pictures after 760px, mostly same pcitures of small size is used.*/
+          @media only screen and (max-width: 760px) {
+  .img {
+    /* to improve page load speed on mobile internet connections */
+    background-image: url("img/background.jpg");
+  }
 }
 </style>
 </head>
 
 <body>
-<div id="bannersection"></div>
-</div>
+      <div class="img"></div>
 </body>
 </html>
